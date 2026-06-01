@@ -22,10 +22,7 @@ int main() {
     };
 
     struct mg_addr dummy_ip = {0};
-
-    printf("The program will now hang permanently at 100%% CPU usage\n");
-
-    // Trigger the infinite loop in the SAN parser
+  
     mg_tls_verify_cert_san(malicious_cert, sizeof(malicious_cert), "localhost", &dummy_ip);
 
     printf("This line will never execute\n");
