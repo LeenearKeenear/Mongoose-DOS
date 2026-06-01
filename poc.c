@@ -23,7 +23,6 @@ int main() {
 
     struct mg_addr dummy_ip = {0};
 
-    printf("Passing malicious cert to Mongoose TLS parser\n");
     printf("The program will now hang permanently at 100%% CPU usage\n");
 
     // Trigger the infinite loop in the SAN parser
